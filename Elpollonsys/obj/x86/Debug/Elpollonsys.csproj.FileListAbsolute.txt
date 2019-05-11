@@ -1,0 +1,17 @@
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.Almacen.resources
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.Form1.resources
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.Gestion.resources
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.Menu.resources
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.NuevoLote.resources
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.Properties.Resources.resources
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.Venta.resources
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.csproj.GenerateResource.Cache
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\bin\Debug\Elpollonsys.exe.config
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\bin\Debug\Elpollonsys.exe
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\bin\Debug\Elpollonsys.pdb
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.exe
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.pdb
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.csprojResolveAssemblyReference.cache
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.eliminarstockdialog.resources
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.UYPerdidas.resources
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.Ajusteprecio.resources
