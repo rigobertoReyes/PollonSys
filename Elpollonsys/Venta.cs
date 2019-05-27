@@ -16,6 +16,7 @@ namespace Elpollonsys
         {
 
             InitializeComponent();
+            label1.Text = "Vendedor: " + Program.nombredeusuario;
             this.productoTableAdapter.Fill(this.productoDS.Producto);
             
             int k = 0;
@@ -51,6 +52,7 @@ namespace Elpollonsys
                 }
             }
         }
+        
         int totalventa = 0;
         string[,] indiceboton = new string[100,4];
         public void Venta_Click(object sender, EventArgs e,Button[,] boton)
@@ -119,12 +121,11 @@ namespace Elpollonsys
             
         }
         public string permiso = "Admin";
-        private void button2_Click(object sender, EventArgs e)
-        {
-            
-        }
+
         private void Venta_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'utilidadesDS.Utilidades' table. You can move, or remove it, as needed.
+            this.utilidadesTableAdapter.Fill(this.utilidadesDS.Utilidades);
             // TODO: This line of code loads data into the 'productoDS.Producto' table. You can move, or remove it, as needed.
             this.productoTableAdapter.Fill(this.productoDS.Producto);
             // TODO: This line of code loads data into the 'precioDS.Precios' table. You can move, or remove it, as needed.
@@ -136,45 +137,7 @@ namespace Elpollonsys
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button10_Click(object sender, EventArgs e)
         {
@@ -270,6 +233,42 @@ namespace Elpollonsys
             //        }
             //    }
             //}
+        }
+        public void clean() 
+        {
+            listBox1.Items.Clear();
+            totalventa = 0;
+            for (int i = 0; i < boton.GetLength(0); i++)
+            {
+                for (int j = 0; j < boton.GetLength(1); j++)
+                {
+                    if (boton[i,j] != null)
+                    {
+                        boton[i, j].Text = "0";      
+                    }
+                    
+                }
+            }
+            ventaLabel.Text = "Total: $0";
+        }
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            DateTime fec = DateTime.Now;
+            
+            if (Convert.ToInt16(utilidadesTableAdapter.Yahizoventa(fec.Year+"-"+fec.Month+"-"+fec.Day,Program.nombredeusuario)) == 1)
+            {
+                int cantidad = Convert.ToInt16( utilidadesTableAdapter.GetPollos(Program.nombredeusuario));
+                cantidad = cantidad + Convert.ToInt16(boton[0, 0].Text);
+                utilidadesTableAdapter.UpdateVenta(cantidad, Program.nombredeusuario);
+                MessageBox.Show("Venta registrada con exito");
+                clean();
+            }
+            else
+            {
+                utilidadesTableAdapter.NewVenta(Convert.ToInt16(boton[0, 0].Text), Convert.ToInt16(boton[0, 0].Tag), Program.nombredeusuario);
+                MessageBox.Show("Venta registrada con exito");
+                clean();
+            }
         }
 
      

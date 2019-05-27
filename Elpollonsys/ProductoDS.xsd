@@ -73,7 +73,7 @@ SELECT idProducto, nombreProducto, precio, imagen, cantidadEstante FROM Producto
               <Mapping SourceColumn="cantidadEstante" DataSetColumn="cantidadEstante" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="PollonDBConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Countproductos" Modifier="Public" Name="Countproductos" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="Countproductos">
+              <DbSource ConnectionRef="PollonDBConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Countproductos" Modifier="Public" Name="Countproductos" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Countproductos">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        COUNT(*) AS Expr1
@@ -82,7 +82,7 @@ FROM            Producto</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="PollonDBConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Nuevoproducto" Modifier="Public" Name="Nuevoproducto" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Nuevoproducto">
+              <DbSource ConnectionRef="PollonDBConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Nuevoproducto" Modifier="Public" Name="Nuevoproducto" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="Nuevoproducto">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO Producto
@@ -98,7 +98,7 @@ VALUES        (@nombreProducto,@precio,@imagen,@cantidadEstante);
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="PollonDBConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Updateproducto" Modifier="Public" Name="Updateproducto" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="Updateproducto">
+              <DbSource ConnectionRef="PollonDBConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Updateproducto" Modifier="Public" Name="Updateproducto" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="Updateproducto">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE       Producto
@@ -125,7 +125,7 @@ WHERE        (idProducto = @Original_idProducto);
   <xs:element name="ProductoDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ProductoDS" msprop:Generator_UserDSName="ProductoDS">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Producto" msprop:Generator_TableClassName="ProductoDataTable" msprop:Generator_TableVarName="tableProducto" msprop:Generator_TablePropName="Producto" msprop:Generator_RowDeletingName="ProductoRowDeleting" msprop:Generator_RowChangingName="ProductoRowChanging" msprop:Generator_RowEvHandlerName="ProductoRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductoRowDeleted" msprop:Generator_UserTableName="Producto" msprop:Generator_RowChangedName="ProductoRowChanged" msprop:Generator_RowEvArgName="ProductoRowChangeEvent" msprop:Generator_RowClassName="ProductoRow">
+        <xs:element name="Producto" msprop:Generator_TableClassName="ProductoDataTable" msprop:Generator_TableVarName="tableProducto" msprop:Generator_RowChangedName="ProductoRowChanged" msprop:Generator_TablePropName="Producto" msprop:Generator_RowDeletingName="ProductoRowDeleting" msprop:Generator_RowChangingName="ProductoRowChanging" msprop:Generator_RowEvHandlerName="ProductoRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductoRowDeleted" msprop:Generator_RowClassName="ProductoRow" msprop:Generator_UserTableName="Producto" msprop:Generator_RowEvArgName="ProductoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idProducto" msprop:Generator_ColumnVarNameInTable="columnidProducto" msprop:Generator_ColumnPropNameInRow="idProducto" msprop:Generator_ColumnPropNameInTable="idProductoColumn" msprop:Generator_UserColumnName="idProducto" type="xs:int" />

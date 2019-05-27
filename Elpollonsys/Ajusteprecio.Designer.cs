@@ -40,12 +40,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.productoDataGridView = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.nombreProductoTextBox = new System.Windows.Forms.TextBox();
-            this.precioTextBox = new System.Windows.Forms.TextBox();
-            this.imagenTextBox = new System.Windows.Forms.TextBox();
-            this.cantidadEstanteTextBox = new System.Windows.Forms.TextBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +47,12 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productoDS = new Elpollonsys.ProductoDS();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.nombreProductoTextBox = new System.Windows.Forms.TextBox();
+            this.precioTextBox = new System.Windows.Forms.TextBox();
+            this.imagenTextBox = new System.Windows.Forms.TextBox();
+            this.cantidadEstanteTextBox = new System.Windows.Forms.TextBox();
             this.productoTableAdapter = new Elpollonsys.ProductoDSTableAdapters.ProductoTableAdapter();
             this.tableAdapterManager1 = new Elpollonsys.ProductoDSTableAdapters.TableAdapterManager();
             nombreProductoLabel = new System.Windows.Forms.Label();
@@ -69,7 +69,9 @@
             // nombreProductoLabel
             // 
             nombreProductoLabel.AutoSize = true;
-            nombreProductoLabel.Location = new System.Drawing.Point(30, 84);
+            nombreProductoLabel.BackColor = System.Drawing.Color.Transparent;
+            nombreProductoLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            nombreProductoLabel.Location = new System.Drawing.Point(33, 41);
             nombreProductoLabel.Name = "nombreProductoLabel";
             nombreProductoLabel.Size = new System.Drawing.Size(91, 13);
             nombreProductoLabel.TabIndex = 24;
@@ -78,7 +80,9 @@
             // precioLabel
             // 
             precioLabel.AutoSize = true;
-            precioLabel.Location = new System.Drawing.Point(30, 110);
+            precioLabel.BackColor = System.Drawing.Color.Transparent;
+            precioLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            precioLabel.Location = new System.Drawing.Point(33, 67);
             precioLabel.Name = "precioLabel";
             precioLabel.Size = new System.Drawing.Size(39, 13);
             precioLabel.TabIndex = 26;
@@ -87,7 +91,9 @@
             // imagenLabel
             // 
             imagenLabel.AutoSize = true;
-            imagenLabel.Location = new System.Drawing.Point(30, 136);
+            imagenLabel.BackColor = System.Drawing.Color.Transparent;
+            imagenLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            imagenLabel.Location = new System.Drawing.Point(33, 93);
             imagenLabel.Name = "imagenLabel";
             imagenLabel.Size = new System.Drawing.Size(44, 13);
             imagenLabel.TabIndex = 28;
@@ -96,7 +102,9 @@
             // cantidadEstanteLabel
             // 
             cantidadEstanteLabel.AutoSize = true;
-            cantidadEstanteLabel.Location = new System.Drawing.Point(30, 162);
+            cantidadEstanteLabel.BackColor = System.Drawing.Color.Transparent;
+            cantidadEstanteLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            cantidadEstanteLabel.Location = new System.Drawing.Point(33, 119);
             cantidadEstanteLabel.Name = "cantidadEstanteLabel";
             cantidadEstanteLabel.Size = new System.Drawing.Size(90, 13);
             cantidadEstanteLabel.TabIndex = 30;
@@ -124,7 +132,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(272, 286);
+            this.button1.Location = new System.Drawing.Point(164, 209);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 21;
@@ -134,7 +142,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(110, 286);
+            this.button2.Location = new System.Drawing.Point(2, 209);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 22;
@@ -156,7 +164,7 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.productoDataGridView.DataSource = this.productoBindingSource;
-            this.productoDataGridView.Location = new System.Drawing.Point(242, 55);
+            this.productoDataGridView.Location = new System.Drawing.Point(245, 12);
             this.productoDataGridView.MultiSelect = false;
             this.productoDataGridView.Name = "productoDataGridView";
             this.productoDataGridView.ReadOnly = true;
@@ -164,55 +172,7 @@
             this.productoDataGridView.Size = new System.Drawing.Size(342, 220);
             this.productoDataGridView.TabIndex = 31;
             this.productoDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productoDataGridView_CellClick);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(191, 286);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "Nuevo";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = global::Elpollonsys.Properties.Resources._62319;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Location = new System.Drawing.Point(192, 130);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(35, 23);
-            this.button4.TabIndex = 33;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // nombreProductoTextBox
-            // 
-            this.nombreProductoTextBox.Location = new System.Drawing.Point(127, 77);
-            this.nombreProductoTextBox.Name = "nombreProductoTextBox";
-            this.nombreProductoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.nombreProductoTextBox.TabIndex = 34;
-            // 
-            // precioTextBox
-            // 
-            this.precioTextBox.Location = new System.Drawing.Point(127, 104);
-            this.precioTextBox.Name = "precioTextBox";
-            this.precioTextBox.Size = new System.Drawing.Size(100, 20);
-            this.precioTextBox.TabIndex = 35;
-            // 
-            // imagenTextBox
-            // 
-            this.imagenTextBox.Location = new System.Drawing.Point(127, 132);
-            this.imagenTextBox.Name = "imagenTextBox";
-            this.imagenTextBox.Size = new System.Drawing.Size(58, 20);
-            this.imagenTextBox.TabIndex = 36;
-            // 
-            // cantidadEstanteTextBox
-            // 
-            this.cantidadEstanteTextBox.Location = new System.Drawing.Point(127, 159);
-            this.cantidadEstanteTextBox.Name = "cantidadEstanteTextBox";
-            this.cantidadEstanteTextBox.Size = new System.Drawing.Size(100, 20);
-            this.cantidadEstanteTextBox.TabIndex = 37;
+            
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -259,6 +219,55 @@
             this.productoDS.DataSetName = "ProductoDS";
             this.productoDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(83, 209);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 32;
+            this.button3.Text = "Nuevo";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = global::Elpollonsys.Properties.Resources._62319;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.Location = new System.Drawing.Point(195, 87);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(35, 23);
+            this.button4.TabIndex = 33;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // nombreProductoTextBox
+            // 
+            this.nombreProductoTextBox.Location = new System.Drawing.Point(130, 34);
+            this.nombreProductoTextBox.Name = "nombreProductoTextBox";
+            this.nombreProductoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nombreProductoTextBox.TabIndex = 34;
+            // 
+            // precioTextBox
+            // 
+            this.precioTextBox.Location = new System.Drawing.Point(130, 61);
+            this.precioTextBox.Name = "precioTextBox";
+            this.precioTextBox.Size = new System.Drawing.Size(100, 20);
+            this.precioTextBox.TabIndex = 35;
+            // 
+            // imagenTextBox
+            // 
+            this.imagenTextBox.Location = new System.Drawing.Point(130, 89);
+            this.imagenTextBox.Name = "imagenTextBox";
+            this.imagenTextBox.Size = new System.Drawing.Size(58, 20);
+            this.imagenTextBox.TabIndex = 36;
+            // 
+            // cantidadEstanteTextBox
+            // 
+            this.cantidadEstanteTextBox.Location = new System.Drawing.Point(130, 116);
+            this.cantidadEstanteTextBox.Name = "cantidadEstanteTextBox";
+            this.cantidadEstanteTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cantidadEstanteTextBox.TabIndex = 37;
+            // 
             // productoTableAdapter
             // 
             this.productoTableAdapter.ClearBeforeFill = true;
@@ -275,7 +284,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Elpollonsys.Properties.Resources.images;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(617, 334);
+            this.ClientSize = new System.Drawing.Size(617, 260);
             this.Controls.Add(this.cantidadEstanteTextBox);
             this.Controls.Add(this.imagenTextBox);
             this.Controls.Add(this.precioTextBox);

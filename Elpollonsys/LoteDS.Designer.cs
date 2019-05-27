@@ -1263,7 +1263,7 @@ WHERE        (idLote = @Original_idLote);
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual LoteDS.LoteDataTable GetDataBy1() {
+        public virtual LoteDS.LoteDataTable GetDataBy11() {
             this.Adapter.SelectCommand = this.CommandCollection[3];
             LoteDS.LoteDataTable dataTable = new LoteDS.LoteDataTable();
             this.Adapter.Fill(dataTable);
@@ -1359,7 +1359,7 @@ WHERE        (idLote = @Original_idLote);
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual LoteDS.LoteDataTable GetDataBy11() {
+        public virtual LoteDS.LoteDataTable GetDataBy111() {
             this.Adapter.SelectCommand = this.CommandCollection[7];
             LoteDS.LoteDataTable dataTable = new LoteDS.LoteDataTable();
             this.Adapter.Fill(dataTable);
@@ -1819,7 +1819,7 @@ WHERE        (idLote = @Original_idLote);
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual global::System.Nullable<int> Istherelote(int ca) {
+        public virtual object Istherelote(int ca) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[9];
             command.Parameters[0].Value = ((int)(ca));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
@@ -1838,10 +1838,10 @@ WHERE        (idLote = @Original_idLote);
             }
             if (((returnValue == null) 
                         || (returnValue.GetType() == typeof(global::System.DBNull)))) {
-                return new global::System.Nullable<int>();
+                return null;
             }
             else {
-                return new global::System.Nullable<int>(((int)(returnValue)));
+                return ((object)(returnValue));
             }
         }
         

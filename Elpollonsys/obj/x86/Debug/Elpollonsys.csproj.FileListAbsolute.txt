@@ -15,3 +15,5 @@ C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj
 C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.eliminarstockdialog.resources
 C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.UYPerdidas.resources
 C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.Ajusteprecio.resources
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.Ajustes.resources
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.Ajusteusuario.resources

@@ -30,13 +30,13 @@ namespace Elpollonsys
             int i = 1;
             do
             {
-                if (this.loteTableAdapter.Istherelote(i) == 1)
+                if (Convert.ToInt16(this.loteTableAdapter.Istherelote(i)) == 1)
                 {
                     comboBox1.Items.Add(i);
                 }
                 i++;
-                
-            } while (this.loteTableAdapter.Istherelote(i) == 1);
+
+            } while (Convert.ToInt16(this.loteTableAdapter.Istherelote(i)) == 1);
 
         }
 
@@ -67,7 +67,10 @@ namespace Elpollonsys
             daysauxa = dias - daysauxa;
             fecha = fecha.AddDays(daysauxa);
             fechaAceptableDateTimePicker.Text = Convert.ToString(fecha);
+            fechaCaducidadDateTimePicker.Text = Convert.ToString(fecha);
+            daysauxb = dias;
             daysauxa = dias;
+
         }
 
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
@@ -92,7 +95,7 @@ namespace Elpollonsys
                 if (Convert.ToInt16(cantidadLoteTextBox.Text) >= Convert.ToInt16(stockTextBox.Text))
                 {
                     this.loteTableAdapter.NuevoLote(Convert.ToInt16(precioLoteTextBox.Text), Convert.ToString(fechaLlegadaDateTimePicker.Text),
-                    Convert.ToString(fechaAceptableDateTimePicker.Text), Convert.ToString(fechaCaducidadDateTimePicker.Text), Convert.ToInt16(stockTextBox.Text), "Aceptable", comboBox2.Text, Convert.ToInt16(comboBox1.Text));
+                    Convert.ToString(fechaAceptableDateTimePicker.Text), Convert.ToString(fechaCaducidadDateTimePicker.Text), Convert.ToInt16(stockTextBox.Text), "Fresco", comboBox2.Text, Convert.ToInt16(comboBox1.Text));
                     MessageBox.Show("Datos Actualizados Correctamente");
                     this.Close();
                 }

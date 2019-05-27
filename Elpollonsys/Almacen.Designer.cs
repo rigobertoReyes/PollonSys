@@ -174,6 +174,7 @@
             this.loteDataGridView.Location = new System.Drawing.Point(15, 123);
             this.loteDataGridView.MultiSelect = false;
             this.loteDataGridView.Name = "loteDataGridView";
+            this.loteDataGridView.ReadOnly = true;
             this.loteDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.loteDataGridView.Size = new System.Drawing.Size(943, 220);
             this.loteDataGridView.TabIndex = 7;
@@ -190,48 +191,56 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "cantidadLote";
             this.dataGridViewTextBoxColumn2.HeaderText = "cantidadLote";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "precioLote";
             this.dataGridViewTextBoxColumn3.HeaderText = "precioLote";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "fechaLlegada";
             this.dataGridViewTextBoxColumn4.HeaderText = "fechaLlegada";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "fechaAceptable";
             this.dataGridViewTextBoxColumn5.HeaderText = "fechaAceptable";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "fechaCaducidad";
             this.dataGridViewTextBoxColumn6.HeaderText = "fechaCaducidad";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "stock";
             this.dataGridViewTextBoxColumn7.HeaderText = "stock";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "condicionActual";
             this.dataGridViewTextBoxColumn8.HeaderText = "condicionActual";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "estadoLote";
             this.dataGridViewTextBoxColumn9.HeaderText = "estadoLote";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // loteBindingSource
             // 

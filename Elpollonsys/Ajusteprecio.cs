@@ -34,6 +34,9 @@ namespace Elpollonsys
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Ajustes a = new Ajustes();
+            a.StartPosition = FormStartPosition.CenterScreen;
+            a.Show();
             this.Close();
         }
 
@@ -103,5 +106,7 @@ namespace Elpollonsys
             imagenTextBox.Text = productoDS.Producto[productoBindingSource.Position].imagen.ToString();
             cantidadEstanteTextBox.Text = productoDS.Producto[productoBindingSource.Position].cantidadEstante.ToString();
         }
+
+     
     }
 }

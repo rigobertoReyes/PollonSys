@@ -66,5 +66,14 @@ namespace Elpollonsys
             u.Show();
             this.Dispose();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Ajustes a = new Ajustes();
+            a.StartPosition = FormStartPosition.CenterScreen;
+            a.ShowDialog();
+            
+        }
     }
 }

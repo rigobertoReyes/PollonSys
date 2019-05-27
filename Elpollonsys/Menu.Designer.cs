@@ -38,6 +38,7 @@
             this.usuarioTableAdapter = new Elpollonsys.PollonDBDataSetTableAdapters.UsuarioTableAdapter();
             this.tableAdapterManager = new Elpollonsys.PollonDBDataSetTableAdapters.TableAdapterManager();
             this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pollonDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -127,6 +128,18 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
+            // button5
+            // 
+            this.button5.BackgroundImage = global::Elpollonsys.Properties.Resources._106821;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button5.Location = new System.Drawing.Point(3, 8);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 51);
+            this.button5.TabIndex = 6;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -134,12 +147,14 @@
             this.BackgroundImage = global::Elpollonsys.Properties.Resources.images;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(656, 399);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pollonDBDataSet)).EndInit();
@@ -160,5 +175,6 @@
         private PollonDBDataSetTableAdapters.UsuarioTableAdapter usuarioTableAdapter;
         private PollonDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button5;
     }
 }

@@ -117,7 +117,7 @@ WHERE        (idLote = @Original_idLote);
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="PollonDBConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Eliminarstock" Modifier="Public" Name="Eliminarstock" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="Eliminarstock">
+              <DbSource ConnectionRef="PollonDBConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Eliminarstock" Modifier="Public" Name="Eliminarstock" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="Eliminarstock">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE       Lote
@@ -131,7 +131,7 @@ WHERE        (idLote = @Original_idLote);
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="PollonDBConnectionString (Settings)" DbObjectName="PollonDB.dbo.Lote" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBycantidadLote" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillBycantidadLote" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBycantidadLote">
+              <DbSource ConnectionRef="PollonDBConnectionString (Settings)" DbObjectName="PollonDB.dbo.Lote" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBycantidadLote" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy11" GeneratorSourceName="FillBycantidadLote" GetMethodModifier="Public" GetMethodName="GetDataBy11" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy11" UserSourceName="FillBycantidadLote">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        idLote, cantidadLote, precioLote, fechaLlegada, fechaAceptable, fechaCaducidad, stock, condicionActual, estadoLote
@@ -171,7 +171,7 @@ ORDER BY fechaLlegada</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="PollonDBConnectionString (Settings)" DbObjectName="PollonDB.dbo.Lote" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBystock" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy11" GeneratorSourceName="FillBystock" GetMethodModifier="Public" GetMethodName="GetDataBy11" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy11" UserSourceName="FillBystock">
+              <DbSource ConnectionRef="PollonDBConnectionString (Settings)" DbObjectName="PollonDB.dbo.Lote" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBystock" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy111" GeneratorSourceName="FillBystock" GetMethodModifier="Public" GetMethodName="GetDataBy111" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy111" UserSourceName="FillBystock">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        idLote, cantidadLote, precioLote, fechaLlegada, fechaAceptable, fechaCaducidad, stock, condicionActual, estadoLote
@@ -192,7 +192,7 @@ ORDER BY stock</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="PollonDBConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Istherelote" Modifier="Public" Name="Istherelote" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="Istherelote">
+              <DbSource ConnectionRef="PollonDBConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Istherelote" Modifier="Public" Name="Istherelote" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="Istherelote">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        COUNT(*) AS Expr1
@@ -234,7 +234,7 @@ WHERE        (idLote = @Original_idLote);
   <xs:element name="LoteDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="LoteDS" msprop:Generator_UserDSName="LoteDS">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Lote" msprop:Generator_TableClassName="LoteDataTable" msprop:Generator_TableVarName="tableLote" msprop:Generator_TablePropName="Lote" msprop:Generator_RowDeletingName="LoteRowDeleting" msprop:Generator_RowChangingName="LoteRowChanging" msprop:Generator_RowEvHandlerName="LoteRowChangeEventHandler" msprop:Generator_RowDeletedName="LoteRowDeleted" msprop:Generator_UserTableName="Lote" msprop:Generator_RowChangedName="LoteRowChanged" msprop:Generator_RowEvArgName="LoteRowChangeEvent" msprop:Generator_RowClassName="LoteRow">
+        <xs:element name="Lote" msprop:Generator_TableClassName="LoteDataTable" msprop:Generator_TableVarName="tableLote" msprop:Generator_RowChangedName="LoteRowChanged" msprop:Generator_TablePropName="Lote" msprop:Generator_RowDeletingName="LoteRowDeleting" msprop:Generator_RowChangingName="LoteRowChanging" msprop:Generator_RowEvHandlerName="LoteRowChangeEventHandler" msprop:Generator_RowDeletedName="LoteRowDeleted" msprop:Generator_RowClassName="LoteRow" msprop:Generator_UserTableName="Lote" msprop:Generator_RowEvArgName="LoteRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idLote" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidLote" msprop:Generator_ColumnPropNameInRow="idLote" msprop:Generator_ColumnPropNameInTable="idLoteColumn" msprop:Generator_UserColumnName="idLote" type="xs:int" />
