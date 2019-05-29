@@ -17,3 +17,12 @@ C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj
 C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.Ajusteprecio.resources
 C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.Ajustes.resources
 C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.Ajusteusuario.resources
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\bin\Debug\itextsharp.xml
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.formEdituser.resources
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Interop.AcroPDFLib.dll
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.csproj.ResolveComReference.cache
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.Form2.resources
+C:\Users\Rigor\documents\visual studio 2010\Projects\Elpollonsys\Elpollonsys\obj\x86\Debug\Elpollonsys.formeditarproducto.resources

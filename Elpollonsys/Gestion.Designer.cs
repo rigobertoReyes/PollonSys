@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gestion));
             this.label1 = new System.Windows.Forms.Label();
             this.PTAtxt = new System.Windows.Forms.TextBox();
             this.PFtxt = new System.Windows.Forms.TextBox();
@@ -410,6 +411,7 @@
             this.ClientSize = new System.Drawing.Size(725, 531);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Gestion";
             this.Text = "Gestion";
             this.Load += new System.EventHandler(this.Gestion_Load);

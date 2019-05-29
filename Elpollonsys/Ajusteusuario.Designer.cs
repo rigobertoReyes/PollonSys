@@ -30,9 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label usernameLabel;
-            System.Windows.Forms.Label passwordLabel;
-            System.Windows.Forms.Label nombreLabel;
-            System.Windows.Forms.Label tipoLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ajusteusuario));
             this.usuarioDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,17 +42,12 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.usuarioTableAdapter = new Elpollonsys.UsuarioDSTableAdapters.UsuarioTableAdapter();
             this.tableAdapterManager = new Elpollonsys.UsuarioDSTableAdapters.TableAdapterManager();
-            this.usernameTextBox = new System.Windows.Forms.TextBox();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.Buscartxt = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
             usernameLabel = new System.Windows.Forms.Label();
-            passwordLabel = new System.Windows.Forms.Label();
-            nombreLabel = new System.Windows.Forms.Label();
-            tipoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioDS)).BeginInit();
@@ -63,38 +56,14 @@
             // usernameLabel
             // 
             usernameLabel.AutoSize = true;
-            usernameLabel.Location = new System.Drawing.Point(37, 25);
+            usernameLabel.BackColor = System.Drawing.Color.Transparent;
+            usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            usernameLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            usernameLabel.Location = new System.Drawing.Point(12, 24);
             usernameLabel.Name = "usernameLabel";
-            usernameLabel.Size = new System.Drawing.Size(58, 13);
-            usernameLabel.TabIndex = 37;
-            usernameLabel.Text = "Username:";
-            // 
-            // passwordLabel
-            // 
-            passwordLabel.AutoSize = true;
-            passwordLabel.Location = new System.Drawing.Point(37, 51);
-            passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new System.Drawing.Size(61, 13);
-            passwordLabel.TabIndex = 39;
-            passwordLabel.Text = "Contraseña";
-            // 
-            // nombreLabel
-            // 
-            nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(37, 83);
-            nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(47, 13);
-            nombreLabel.TabIndex = 41;
-            nombreLabel.Text = "Nombre:";
-            // 
-            // tipoLabel
-            // 
-            tipoLabel.AutoSize = true;
-            tipoLabel.Location = new System.Drawing.Point(37, 109);
-            tipoLabel.Name = "tipoLabel";
-            tipoLabel.Size = new System.Drawing.Size(31, 13);
-            tipoLabel.TabIndex = 43;
-            tipoLabel.Text = "Tipo:";
+            usernameLabel.Size = new System.Drawing.Size(144, 20);
+            usernameLabel.TabIndex = 49;
+            usernameLabel.Text = "Buscar por nombre";
             // 
             // usuarioDataGridView
             // 
@@ -108,11 +77,11 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.usuarioDataGridView.DataSource = this.usuarioBindingSource;
-            this.usuarioDataGridView.Location = new System.Drawing.Point(247, 12);
+            this.usuarioDataGridView.Location = new System.Drawing.Point(12, 47);
             this.usuarioDataGridView.Name = "usuarioDataGridView";
             this.usuarioDataGridView.ReadOnly = true;
             this.usuarioDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.usuarioDataGridView.Size = new System.Drawing.Size(341, 220);
+            this.usuarioDataGridView.Size = new System.Drawing.Size(444, 220);
             this.usuarioDataGridView.TabIndex = 1;
             this.usuarioDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usuarioDataGridView_CellClick);
             // 
@@ -164,45 +133,33 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(85, 178);
+            this.button3.Location = new System.Drawing.Point(215, 276);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 35;
-            this.button3.Text = "Nuevo";
+            this.button3.Text = "Agregar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(4, 178);
+            this.button2.Location = new System.Drawing.Point(12, 276);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 34;
-            this.button2.Text = "Cancelar";
+            this.button2.Text = "Atras";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(166, 178);
+            this.button1.Location = new System.Drawing.Point(296, 276);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 33;
             this.button1.Text = "Actualizar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Almacen",
-            "Venta"});
-            this.comboBox1.Location = new System.Drawing.Point(117, 110);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 44;
             // 
             // usuarioTableAdapter
             // 
@@ -214,30 +171,9 @@
             this.tableAdapterManager.UpdateOrder = Elpollonsys.UsuarioDSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = this.usuarioTableAdapter;
             // 
-            // usernameTextBox
-            // 
-            this.usernameTextBox.Location = new System.Drawing.Point(117, 25);
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.usernameTextBox.TabIndex = 45;
-            // 
-            // passwordTextBox
-            // 
-            this.passwordTextBox.Location = new System.Drawing.Point(117, 51);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(100, 20);
-            this.passwordTextBox.TabIndex = 46;
-            // 
-            // nombreTextBox
-            // 
-            this.nombreTextBox.Location = new System.Drawing.Point(117, 80);
-            this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
-            this.nombreTextBox.TabIndex = 47;
-            // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(166, 208);
+            this.button4.Location = new System.Drawing.Point(381, 276);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 48;
@@ -245,29 +181,42 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // Buscartxt
+            // 
+            this.Buscartxt.Location = new System.Drawing.Point(163, 23);
+            this.Buscartxt.Name = "Buscartxt";
+            this.Buscartxt.Size = new System.Drawing.Size(156, 20);
+            this.Buscartxt.TabIndex = 50;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(335, 22);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 51;
+            this.button5.Text = "Buscar";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Ajusteusuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Elpollonsys.Properties.Resources.images;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(608, 256);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.nombreTextBox);
-            this.Controls.Add(this.passwordTextBox);
-            this.Controls.Add(this.usernameTextBox);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(477, 318);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.Buscartxt);
             this.Controls.Add(usernameLabel);
-            this.Controls.Add(passwordLabel);
-            this.Controls.Add(nombreLabel);
-            this.Controls.Add(tipoLabel);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.usuarioDataGridView);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Ajusteusuario";
-            this.Text = "Ajusteusuario";
+            this.Text = "Ajuste de usuarios";
             this.Load += new System.EventHandler(this.Ajusteusuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
@@ -292,10 +241,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox usernameTextBox;
-        private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox Buscartxt;
+        private System.Windows.Forms.Button button5;
     }
 }

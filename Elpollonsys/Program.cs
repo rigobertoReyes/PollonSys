@@ -19,7 +19,7 @@ namespace Elpollonsys
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
-            UYPerdidas form = new UYPerdidas();
+            Form1 form = new Form1();
             form.Show();
             Application.Run();
         }

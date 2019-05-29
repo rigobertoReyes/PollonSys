@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UYPerdidas));
             this.perdidasDS = new Elpollonsys.PerdidasDS();
             this.perdidasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.perdidasTableAdapter = new Elpollonsys.PerdidasDSTableAdapters.PerdidasTableAdapter();
@@ -271,7 +272,7 @@
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label9.Location = new System.Drawing.Point(287, 103);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 16);
+            this.label9.Size = new System.Drawing.Size(37, 16);
             this.label9.TabIndex = 24;
             this.label9.Text = "Mes";
             // 
@@ -307,7 +308,7 @@
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label8.Location = new System.Drawing.Point(6, 104);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 16);
+            this.label8.Size = new System.Drawing.Size(51, 16);
             this.label8.TabIndex = 22;
             this.label8.Text = "Fecha";
             // 
@@ -327,7 +328,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(6, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 16);
+            this.label1.Size = new System.Drawing.Size(207, 16);
             this.label1.TabIndex = 25;
             this.label1.Text = "Cantidad de pollos vendidos";
             // 
@@ -347,7 +348,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(6, 137);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(162, 16);
+            this.label3.Size = new System.Drawing.Size(159, 16);
             this.label3.TabIndex = 27;
             this.label3.Text = "Nombre del vendedor";
             // 
@@ -423,7 +424,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(6, 61);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 16);
+            this.label4.Size = new System.Drawing.Size(133, 16);
             this.label4.TabIndex = 31;
             this.label4.Text = "Ganancias totales";
             // 
@@ -464,7 +465,7 @@
             this.PTL.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.PTL.Location = new System.Drawing.Point(6, 100);
             this.PTL.Name = "PTL";
-            this.PTL.Size = new System.Drawing.Size(130, 16);
+            this.PTL.Size = new System.Drawing.Size(128, 16);
             this.PTL.TabIndex = 41;
             this.PTL.Text = "Perdidas Totales";
             // 
@@ -473,7 +474,7 @@
             this.PTtxt.Enabled = false;
             this.PTtxt.Location = new System.Drawing.Point(225, 99);
             this.PTtxt.Name = "PTtxt";
-            this.PTtxt.Size = new System.Drawing.Size(100, 20);
+            this.PTtxt.Size = new System.Drawing.Size(118, 20);
             this.PTtxt.TabIndex = 42;
             // 
             // label5
@@ -484,7 +485,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Location = new System.Drawing.Point(6, 66);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 16);
+            this.label5.Size = new System.Drawing.Size(113, 16);
             this.label5.TabIndex = 39;
             this.label5.Text = "Perdidas netas";
             // 
@@ -493,7 +494,7 @@
             this.PNtxt.Enabled = false;
             this.PNtxt.Location = new System.Drawing.Point(225, 65);
             this.PNtxt.Name = "PNtxt";
-            this.PNtxt.Size = new System.Drawing.Size(100, 20);
+            this.PNtxt.Size = new System.Drawing.Size(118, 20);
             this.PNtxt.TabIndex = 40;
             // 
             // label6
@@ -504,7 +505,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Location = new System.Drawing.Point(6, 34);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 16);
+            this.label6.Size = new System.Drawing.Size(118, 16);
             this.label6.TabIndex = 37;
             this.label6.Text = "Pollos perdidos";
             // 
@@ -524,7 +525,7 @@
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label7.Location = new System.Drawing.Point(10, 136);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 16);
+            this.label7.Size = new System.Drawing.Size(51, 16);
             this.label7.TabIndex = 34;
             this.label7.Text = "Fecha";
             // 
@@ -557,7 +558,7 @@
             this.PPtxt.Enabled = false;
             this.PPtxt.Location = new System.Drawing.Point(225, 33);
             this.PPtxt.Name = "PPtxt";
-            this.PPtxt.Size = new System.Drawing.Size(100, 20);
+            this.PPtxt.Size = new System.Drawing.Size(118, 20);
             this.PPtxt.TabIndex = 38;
             // 
             // label10
@@ -568,7 +569,7 @@
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label10.Location = new System.Drawing.Point(291, 135);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 16);
+            this.label10.Size = new System.Drawing.Size(37, 16);
             this.label10.TabIndex = 36;
             this.label10.Text = "Mes";
             // 
@@ -637,6 +638,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UYPerdidas";
             this.Text = "Utilidades y Perdidas";
             this.Load += new System.EventHandler(this.UYPerdidas_Load);

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Venta));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
@@ -38,6 +39,8 @@
             this.tableAdapterManager = new Elpollonsys.PrecioDSTableAdapters.TableAdapterManager();
             this.ventaLabel = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.subtotallabel = new System.Windows.Forms.Label();
+            this.Ivalabel = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.productoDS = new Elpollonsys.ProductoDS();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -49,6 +52,10 @@
             this.utilidadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.utilidadesTableAdapter = new Elpollonsys.UtilidadesDSTableAdapters.UtilidadesTableAdapter();
             this.tableAdapterManager2 = new Elpollonsys.UtilidadesDSTableAdapters.TableAdapterManager();
+            this.ivaDS = new Elpollonsys.IvaDS();
+            this.ivaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ivaTableAdapter = new Elpollonsys.IvaDSTableAdapters.IvaTableAdapter();
+            this.tableAdapterManager3 = new Elpollonsys.IvaDSTableAdapters.TableAdapterManager();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.precioDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.preciosBindingSource)).BeginInit();
@@ -57,6 +64,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.utilidadesDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.utilidadesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ivaDS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ivaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -75,6 +84,7 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Location = new System.Drawing.Point(6, 19);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(635, 282);
@@ -82,7 +92,7 @@
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(31, 422);
+            this.button11.Location = new System.Drawing.Point(31, 455);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(75, 23);
             this.button11.TabIndex = 12;
@@ -114,7 +124,7 @@
             // 
             this.ventaLabel.AutoSize = true;
             this.ventaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ventaLabel.Location = new System.Drawing.Point(6, 263);
+            this.ventaLabel.Location = new System.Drawing.Point(6, 320);
             this.ventaLabel.Name = "ventaLabel";
             this.ventaLabel.Size = new System.Drawing.Size(105, 25);
             this.ventaLabel.TabIndex = 17;
@@ -125,15 +135,37 @@
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.BackgroundImage = global::Elpollonsys.Properties.Resources.images;
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox2.Controls.Add(this.subtotallabel);
+            this.groupBox2.Controls.Add(this.Ivalabel);
             this.groupBox2.Controls.Add(this.listBox1);
             this.groupBox2.Controls.Add(this.ventaLabel);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox2.Location = new System.Drawing.Point(713, 41);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(325, 307);
+            this.groupBox2.Size = new System.Drawing.Size(325, 357);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Compra";
+            // 
+            // subtotallabel
+            // 
+            this.subtotallabel.AutoSize = true;
+            this.subtotallabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subtotallabel.Location = new System.Drawing.Point(6, 270);
+            this.subtotallabel.Name = "subtotallabel";
+            this.subtotallabel.Size = new System.Drawing.Size(139, 25);
+            this.subtotallabel.TabIndex = 20;
+            this.subtotallabel.Text = "Subtotal: $0";
+            // 
+            // Ivalabel
+            // 
+            this.Ivalabel.AutoSize = true;
+            this.Ivalabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ivalabel.Location = new System.Drawing.Point(6, 295);
+            this.Ivalabel.Name = "Ivalabel";
+            this.Ivalabel.Size = new System.Drawing.Size(62, 25);
+            this.Ivalabel.TabIndex = 19;
+            this.Ivalabel.Text = "IVA: ";
             // 
             // listBox1
             // 
@@ -187,11 +219,11 @@
             this.button1.BackColor = System.Drawing.Color.Green;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(900, 354);
+            this.button1.Location = new System.Drawing.Point(900, 404);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 59);
+            this.button1.Size = new System.Drawing.Size(138, 42);
             this.button1.TabIndex = 15;
-            this.button1.Text = "Agregar a venta";
+            this.button1.Text = "Vender";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -215,18 +247,39 @@
             this.tableAdapterManager2.UpdateOrder = Elpollonsys.UtilidadesDSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager2.UtilidadesTableAdapter = this.utilidadesTableAdapter;
             // 
+            // ivaDS
+            // 
+            this.ivaDS.DataSetName = "IvaDS";
+            this.ivaDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ivaBindingSource
+            // 
+            this.ivaBindingSource.DataMember = "Iva";
+            this.ivaBindingSource.DataSource = this.ivaDS;
+            // 
+            // ivaTableAdapter
+            // 
+            this.ivaTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager3
+            // 
+            this.tableAdapterManager3.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager3.IvaTableAdapter = this.ivaTableAdapter;
+            this.tableAdapterManager3.UpdateOrder = Elpollonsys.IvaDSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // Venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Elpollonsys.Properties.Resources.brasa;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1149, 478);
+            this.ClientSize = new System.Drawing.Size(1149, 485);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Venta";
             this.Text = "Venta";
             this.Load += new System.EventHandler(this.Venta_Load);
@@ -239,6 +292,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.utilidadesDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.utilidadesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ivaDS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ivaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,5 +321,11 @@
         private System.Windows.Forms.BindingSource utilidadesBindingSource;
         private UtilidadesDSTableAdapters.UtilidadesTableAdapter utilidadesTableAdapter;
         private UtilidadesDSTableAdapters.TableAdapterManager tableAdapterManager2;
+        private System.Windows.Forms.Label subtotallabel;
+        private System.Windows.Forms.Label Ivalabel;
+        private IvaDS ivaDS;
+        private System.Windows.Forms.BindingSource ivaBindingSource;
+        private IvaDSTableAdapters.IvaTableAdapter ivaTableAdapter;
+        private IvaDSTableAdapters.TableAdapterManager tableAdapterManager3;
     }
 }

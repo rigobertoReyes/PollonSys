@@ -49,6 +49,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\itextsharp.xtra.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll</HintPath>
       <Private>True</Private>
@@ -103,6 +115,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formeditarproducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formeditarproducto.Designer.cs">
+      <DependentUpon>formeditarproducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formEdituser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formEdituser.Designer.cs">
+      <DependentUpon>formEdituser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gestion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +147,15 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GestionDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IvaDS.cs">
+      <DependentUpon>IvaDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IvaDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IvaDS.xsd</DependentUpon>
     </Compile>
     <Compile Include="LoteDS.cs">
       <DependentUpon>LoteDS.xsd</DependentUpon>
@@ -214,6 +253,15 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formeditarproducto.resx">
+      <DependentUpon>formeditarproducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formEdituser.resx">
+      <DependentUpon>formEdituser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gestion.resx">
       <DependentUpon>Gestion.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,6 +298,17 @@
     </None>
     <None Include="GestionDS.xss">
       <DependentUpon>GestionDS.xsd</DependentUpon>
+    </None>
+    <None Include="IvaDS.xsc">
+      <DependentUpon>IvaDS.xsd</DependentUpon>
+    </None>
+    <None Include="IvaDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IvaDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IvaDS.xss">
+      <DependentUpon>IvaDS.xsd</DependentUpon>
     </None>
     <None Include="LoteDS.xsc">
       <DependentUpon>LoteDS.xsd</DependentUpon>
@@ -424,6 +483,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="62319.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
